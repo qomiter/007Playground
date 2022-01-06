@@ -31,10 +31,10 @@ public class Star : MonoBehaviour
     {
         if (objectCount <= 200)
         {
-            for (int j = 0; j < 5; j++)
+            for (float j = 0; j < 1f; j += 0.1f)
             {
                 transform.position += new Vector3(1, 0, 0);
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.05f);
             }
             Instantiate(star, transform.position, Quaternion.identity);
         }
